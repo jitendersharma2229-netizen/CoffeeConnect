@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog – CoffeeConnect</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <nav class="nav container">
+        <a href="index.html" class="logo-link">
+          <img src="img/logo.png" alt="CoffeeConnect logo" class="logo" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html" class="btn btn-primary">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- PAGE HEADER -->
+      <section class="page-header">
+        <div class="container">
+          <h1>Our Blog</h1>
+          <p>Insights, trends, and ideas from the CoffeeConnect team.</p>
+        </div>
+      </section>
+
+      <!-- BLOG LISTING GRID -->
+      <section class="blog-listing-section">
+        <div class="container">
+          <div class="blog-grid">
+            <div class="blog-post-card">
+              <img src="img/blog1.jpg" alt="Blog Post 1" />
+              <div class="blog-post-content">
+                <h3>The Rise of Micro-Influencers</h3>
+                <p>
+                  Discover why smaller, niche influencers are becoming a
+                  powerhouse in marketing.
+                </p>
+                <a href="#" class="read-more">Read More</a>
+              </div>
+            </div>
+            <div class="blog-post-card">
+              <img src="img/blog2.jpg" alt="Blog Post 2" />
+              <div class="blog-post-content">
+                <h3>5 Tips for a Winning Social Media Strategy</h3>
+                <p>
+                  Actionable advice to boost your brand's presence on social
+                  media.
+                </p>
+                <a href="#" class="read-more">Read More</a>
+              </div>
+            </div>
+            <div class="blog-post-card">
+              <img src="img/blog3.jpg" alt="Blog Post 3" />
+              <div class="blog-post-content">
+                <h3>The Art of Brand Storytelling</h3>
+                <p>
+                  Learn how to craft a compelling narrative that resonates with
+                  your audience.
+                </p>
+                <a href="#" class="read-more">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWSLETTER SECTION (CTA) -->
+      <section id="newsletter" class="cta-section">
+        <div class="container">
+          <h2>Subscribe to Our Newsletter</h2>
+          <p>Get the latest marketing insights delivered to your inbox.</p>
+          <form class="newsletter-form">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              required
+            />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; <span id="year"></span> CoffeeConnect. All rights reserved.
+        </p>
+        <div class="social-links">
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
