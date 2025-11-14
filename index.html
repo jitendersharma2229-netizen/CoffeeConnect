@@ -1,95 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CoffeeConnect – Brew Ideas, Build Futures</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeeConnect - We Brew Ideas Into Impact</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- HERO -->
-  <header class="hero">
-    <nav class="nav">
-      <img src="img/logo.png" alt="CoffeeConnect logo" class="logo" />
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#contact" class="btn">Contact</a></li>
-      </ul>
-    </nav>
 
-    <div class="hero-content">
-      <h1>Brew Ideas. Build Futures.</h1>
-      <p>The ultimate hub for coffee lovers &amp; creators.</p>
-      <a href="#products" class="cta">Explore Beans</a>
-    </div>
-    <img src="img/hero-mug-bulb.svg" alt="hero mug" class="hero-img" />
-  </header>
-
-  <!-- ABOUT -->
-  <section id="about" class="about">
-    <div class="container">
-      <h2>About CoffeeConnect</h2>
-      <p>
-        We connect farmers, roasters and techies to re-imagine the coffee
-        experience — one cup at a time.
-      </p>
-      <img src="img/about.jpg" alt="coffee beans" />
-    </div>
-  </section>
-
-  <!-- PRODUCTS -->
-  <section id="products" class="products">
-    <div class="container">
-      <h2>Our Beans</h2>
-      <div class="grid">
-        <div class="card"><img src="img/p1.jpg" alt="" /><h3>House Blend</h3></div>
-        <div class="card"><img src="img/p2.jpg" alt="" /><h3>Dark Roast</h3></div>
-        <div class="card"><img src="img/p3.jpg" alt="" /><h3>Light Roast</h3></div>
-        <div class="card"><img src="img/p4.jpg" alt="" /><h3>Espresso</h3></div>
-        <div class="card"><img src="img/p5.jpg" alt="" /><h3>Decaf</h3></div>
-        <div class="card"><img src="img/p6.jpg" alt="" /><h3>Cold Brew</h3></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TEAM -->
-  <section id="team" class="team">
-    <div class="container">
-      <h2>Meet the Brew-Crew</h2>
-      <div class="grid">
-        <div class="member">
-          <img src="img/team-arjun.jpg" alt="Arjun" />
-          <h3>Arjun</h3>
-          <span>Founder & Bean Hunter</span>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo-link"><img src="img/logo.png" alt="CoffeeConnect Logo" class="logo"></a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary">Start a Project</a>
+            </nav>
         </div>
-        <div class="member">
-          <img src="img/team-priya.jpg" alt="Priya" />
-          <h3>Priya</h3>
-          <span>Head Roaster</span>
-        </div>
-        <div class="member">
-          <img src="img/team-rahul.jpg" alt="Rahul" />
-          <h3>Rahul</h3>
-          <span>Tech & Community</span>
-        </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- FOOTER -->
-  <footer id="contact" class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> CoffeeConnect.org.in – brewed with ❤️ in India</p>
-      <div class="social">
-        <a href="#">Instagram</a>
-        <a href="#">Twitter</a>
-        <a href="mailto:hello@coffeeconnect.org.in">Email</a>
-      </div>
-    </div>
-  </footer>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <video autoplay loop muted playsinline class="hero-video-bg">
+                <source src="https://assets.lummi.ai/assets/QmXiSj2CcEdT3CgusZbMgjpt41rmnxc8gR7fmeJ1fpAtwB?auto=format" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+            <div class="container hero-content">
+                <h1 class="animate-on-scroll">We Brew Ideas Into Impact.</h1>
+                <p class="animate-on-scroll">Welcome to CoffeeConnect, the creative agency that blends influencer marketing and social media strategy into a perfect brew for your brand.</p>
+                <div class="hero-buttons animate-on-scroll">
+                    <a href="portfolio.html" class="btn btn-primary">Let's Collaborate</a>
+                    <a href="services.html" class="btn btn-secondary">Our Services</a>
+                </div>
+            </div>
+        </section>
 
-  <script src="app.js"></script>
+        <!-- About Section -->
+        <section class="about-section content-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2>Your Daily Dose of Creative Energy</h2>
+                    <p>At CoffeeConnect, we're more than just a marketing agency. We're a team of storytellers, strategists, and digital artists who are passionate about helping brands connect with their audiences in a meaningful way. We believe that every brand has a story to tell, and we're here to help you tell it.</p>
+                </div>
+                <div class="about-stats animate-on-scroll">
+                    <div class="stat-item">
+                        <h3>150+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>99%</h3>
+                        <p>Client Satisfaction</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>50M+</h3>
+                        <p>Audience Reached</p>
+                    </div>
+                </div>
+                <div class="about-image-container animate-on-scroll">
+                    <img src="https://assets.lummi.ai/assets/QmUApqYjKMAEZRSVaSMnfW4jnQd4715WrXebYYWeHLTxvJ?auto=format&w=640" alt="Creative agency team working" class="about-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section content-section bg-light">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2>Our Signature Blends</h2>
+                    <p>From social media to influencer campaigns, we offer a range of services designed to help your brand stand out.</p>
+                </div>
+                <div class="services-grid animate-on-scroll">
+                    <div class="service-card">
+                        <img src="https://assets.lummi.ai/assets/QmSTh1ibYB9pjpjmLo2AxoqQBMtUeTTPBhWtXxo9oT25tr?auto=format&w=640" alt="Social Media Marketing">
+                        <h3>Social Media Marketing</h3>
+                        <p>We craft engaging content and manage your social media channels to grow your online presence.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://assets.lummi.ai/assets/QmUU9bR8WC9pUYmYYwZKQhCJjN7MGeUT2QSZb13Ry7EuC9?auto=format&w=640" alt="Influencer Campaigns">
+                        <h3>Influencer Campaigns</h3>
+                        <p>We connect you with the right influencers to create authentic and impactful marketing campaigns.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://assets.lummi.ai/assets/QmaphzvHRyEQWjEwaugxtEytdUUzNmoKG13r6ejoAPGMv4?auto=format&w=640" alt="Branding & Design">
+                        <h3>Branding & Design</h3>
+                        <p>We develop your brand's visual identity, from logo design to a complete style guide.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio-section content-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2>Freshly Brewed Projects</h2>
+                    <p>Check out some of our recent work and see how we've helped our clients achieve their goals.</p>
+                </div>
+                <div class="portfolio-grid animate-on-scroll">
+                    <div class="portfolio-item">
+                        <img src="https://assets.lummi.ai/assets/QmQWjVjXmLfCXqfFM7g7GkChvRgH5XiWp3QhJrRkY3ps8K?auto=format&w=640" alt="Project 1">
+                        <div class="portfolio-overlay">
+                            <h3>Project Alpha</h3>
+                            <p>Social Media Campaign</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://assets.lummi.ai/assets/QmfH8Xkd58neAoVZm7ERyJRGKzhVXQn3M8TAQ7WaViYZgJ?auto=format&w=640" alt="Project 2">
+                        <div class="portfolio-overlay">
+                            <h3>Project Beta</h3>
+                            <p>Influencer Marketing</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://assets.lummi.ai/assets/QmSownurDf2avjWL7JCsN2Jy2TJkSMJJpoMiWVMA4Bjyv7?auto=format&w=640" alt="Project 3">
+                        <div class="portfolio-overlay">
+                            <h3>Project Gamma</h3>
+                            <p>Branding & Design</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center animate-on-scroll">
+                    <a href="portfolio.html" class="btn btn-primary">View All Work</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section content-section bg-light">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2>Meet the Brew Crew</h2>
+                    <p>Our team of experts is ready to help you take your brand to the next level.</p>
+                </div>
+                <div class="team-grid animate-on-scroll">
+                    <div class="team-member">
+                        <img src="https://assets.lummi.ai/assets/QmUU9bR8WC9pUYmYYwZKQhCJjN7MGeUT2QSZb13Ry7EuC9?auto=format&w=640" alt="Team Member 1">
+                        <h3>Alex Johnson</h3>
+                        <p>Founder & CEO</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://assets.lummi.ai/assets/QmSTh1ibYB9pjpjmLo2AxoqQBMtUeTTPBhWtXxo9oT25tr?auto=format&w=640" alt="Team Member 2">
+                        <h3>Jessica Williams</h3>
+                        <p>Head of Strategy</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://assets.lummi.ai/assets/QmfGhSKYDVzZgcCG65x6ddQzWBBDcmWkXE2eYVQEAU4ok5?auto=format&w=640" alt="Team Member 3">
+                        <h3>Chris Davis</h3>
+                        <p>Creative Director</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section content-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2>What Our Clients Are Saying</h2>
+                </div>
+                <div class="testimonial-carousel animate-on-scroll">
+                    <div class="testimonial-item active">
+                        <p>"CoffeeConnect's creative approach and deep understanding of social media trends have been a game-changer for our brand. Their influencer campaigns drove incredible engagement and brand awareness."</p>
+                        <h4>- Sarah Chen, Founder of "The Style Loft"</h4>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"Working with CoffeeConnect was a fantastic experience. They are professional, responsive, and truly passionate about what they do. I highly recommend them to anyone looking for a creative marketing partner."</p>
+                        <h4>- Mark Robinson, CEO of "Future Gadgets"</h4>
+                    </div>
+                </div>
+                <div class="carousel-nav">
+                    <button class="prev-btn">&lt;</button>
+                    <button class="next-btn">&gt;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section content-section">
+            <div class="container text-center animate-on-scroll">
+                <h2>Let's Brew Something Great Together</h2>
+                <p>Ready to fuel your brand's growth? Get in touch with us to discuss your project and see how we can help.</p>
+                <a href="contact.html" class="btn btn-primary">Let's Connect</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="CoffeeConnect Logo">
+                    <p>Brewing ideas into impact since 2023.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>hello@coffeeconnect.agency</p>
+                    <p>+1 (123) 456-7890</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> CoffeeConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
