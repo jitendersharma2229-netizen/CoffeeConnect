@@ -1,95 +1,2122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CoffeeConnect – Brew Ideas, Build Futures</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- HERO -->
-  <header class="hero">
-    <nav class="nav">
-      <img src="img/logo.png" alt="CoffeeConnect logo" class="logo" />
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#contact" class="btn">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="hero-content">
-      <h1>Brew Ideas. Build Futures.</h1>
-      <p>The ultimate hub for coffee lovers &amp; creators.</p>
-      <a href="#products" class="cta">Explore Beans</a>
-    </div>
-    <img src="img/hero-mug-bulb.svg" alt="hero mug" class="hero-img" />
-  </header>
-
-  <!-- ABOUT -->
-  <section id="about" class="about">
-    <div class="container">
-      <h2>About CoffeeConnect</h2>
-      <p>
-        We connect farmers, roasters and techies to re-imagine the coffee
-        experience — one cup at a time.
-      </p>
-      <img src="img/about.jpg" alt="coffee beans" />
-    </div>
-  </section>
-
-  <!-- PRODUCTS -->
-  <section id="products" class="products">
-    <div class="container">
-      <h2>Our Beans</h2>
-      <div class="grid">
-        <div class="card"><img src="img/p1.jpg" alt="" /><h3>House Blend</h3></div>
-        <div class="card"><img src="img/p2.jpg" alt="" /><h3>Dark Roast</h3></div>
-        <div class="card"><img src="img/p3.jpg" alt="" /><h3>Light Roast</h3></div>
-        <div class="card"><img src="img/p4.jpg" alt="" /><h3>Espresso</h3></div>
-        <div class="card"><img src="img/p5.jpg" alt="" /><h3>Decaf</h3></div>
-        <div class="card"><img src="img/p6.jpg" alt="" /><h3>Cold Brew</h3></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TEAM -->
-  <section id="team" class="team">
-    <div class="container">
-      <h2>Meet the Brew-Crew</h2>
-      <div class="grid">
-        <div class="member">
-          <img src="img/team-arjun.jpg" alt="Arjun" />
-          <h3>Arjun</h3>
-          <span>Founder & Bean Hunter</span>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CoffeeConnect – We Brew Ideas Into Impact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.tailwindcss.com "></script>
+    <script src="https://unpkg.com/lucide@latest "></script>
+  </head>
+  <body class="min-h-screen bg-[#0f172a] text-slate-100 antialiased font-sans">
+    <div id="app" class="min-h-screen flex flex-col">
+      <header
+        class="border-b border-slate-800/70 bg-slate-950/70 backdrop-blur-lg sticky top-0 z-40"
+      >
+        <div
+          class="max-w-6xl mx-auto flex items-center justify-between gap-6 py-4 px-4 md:px-6"
+        >
+          <!-- Logo -->
+          <a href="#home" class="flex items-center gap-2 group">
+            <!-- Replace src with your logo path -->
+            <img
+              src="https://i.ibb.co/1rGhQkj/coffeeconnect-logo.png "
+              alt="CoffeeConnect logo"
+              class="h-9 w-auto object-contain"
+            />
+          </a>
+          <!-- Desktop Nav -->
+          <nav class="hidden md:flex items-center gap-6 text-sm">
+            <a href="#home" class="text-slate-300 hover:text-white transition">
+              Home
+            </a>
+            <a
+              href="#services"
+              class="text-slate-300 hover:text-white transition"
+            >
+              Services
+            </a>
+            <a
+              href="#portfolio"
+              class="text-slate-300 hover:text-white transition"
+            >
+              Portfolio
+            </a>
+            <a href="#about" class="text-slate-300 hover:text-white transition">
+              About
+            </a>
+            <a href="#team" class="text-slate-300 hover:text-white transition">
+              Team
+            </a>
+            <a href="#blog" class="text-slate-300 hover:text-white transition">
+              Blog
+            </a>
+            <a
+              href="#contact"
+              class="text-slate-300 hover:text-white transition"
+            >
+              Contact
+            </a>
+          </nav>
+          <!-- CTA + Mobile Trigger -->
+          <div class="flex items-center gap-3">
+            <a
+              href="#contact"
+              class="hidden md:inline-flex items-center justify-center rounded-full bg-[#FF7A00] text-slate-950 text-xs md:text-sm font-medium tracking-tight px-4 py-2 hover:bg-[#ff8d26] transition"
+            >
+              Start a Project
+            </a>
+            <button
+              id="mobileMenuBtn"
+              class="md:hidden inline-flex items-center justify-center rounded-full border border-slate-700 w-9 h-9 text-slate-100 hover:bg-slate-800 transition"
+              aria-label="Toggle navigation"
+            >
+              <i data-lucide="menu" class="w-4 h-4"></i>
+            </button>
+          </div>
         </div>
-        <div class="member">
-          <img src="img/team-priya.jpg" alt="Priya" />
-          <h3>Priya</h3>
-          <span>Head Roaster</span>
+        <!-- Mobile Nav -->
+        <div
+          id="mobileMenu"
+          class="md:hidden max-h-0 overflow-hidden transition-all border-t border-slate-800/70"
+        >
+          <nav class="flex flex-col gap-2 px-4 py-3 text-sm bg-slate-950/95">
+            <a href="#home" class="py-1 text-slate-300 hover:text-white">
+              Home
+            </a>
+            <a href="#services" class="py-1 text-slate-300 hover:text-white">
+              Services
+            </a>
+            <a href="#portfolio" class="py-1 text-slate-300 hover:text-white">
+              Portfolio
+            </a>
+            <a href="#about" class="py-1 text-slate-300 hover:text-white">
+              About
+            </a>
+            <a href="#team" class="py-1 text-slate-300 hover:text-white">
+              Team
+            </a>
+            <a href="#blog" class="py-1 text-slate-300 hover:text-white">
+              Blog
+            </a>
+            <a href="#contact" class="py-1 text-slate-300 hover:text-white">
+              Contact
+            </a>
+          </nav>
         </div>
-        <div class="member">
-          <img src="img/team-rahul.jpg" alt="Rahul" />
-          <h3>Rahul</h3>
-          <span>Tech & Community</span>
+      </header>
+
+      <main class="flex-1">
+        <!-- HOME PAGE -->
+        <section id="home" class="relative overflow-hidden">
+          <!-- Hero Section -->
+          <div
+            class="relative bg-gradient-to-br from-slate-950 via-[#1F2D4A] to-slate-950"
+          >
+            <div
+              class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 lg:gap-16 items-center py-16 md:py-20 px-4 md:px-6"
+            >
+              <!-- Hero Copy -->
+              <div class="space-y-6">
+                <div
+                  class="inline-flex items-center gap-2 rounded-full border border-slate-700/80 bg-slate-900/60 px-3 py-1 text-[0.7rem] md:text-xs text-slate-300"
+                >
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#30A9DE]"></span>
+                  Influencer-first creative studio
+                </div>
+                <h1
+                  class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold tracking-tight text-white"
+                >
+                  We brew bold content that
+                  <span class="text-[#30A9DE]">caffeinates your brand.</span>
+                </h1>
+                <p
+                  class="text-sm md:text-base text-slate-200/90 max-w-lg leading-relaxed"
+                >
+                  CoffeeConnect blends creators, strategy, and storytelling into
+                  campaigns that feel human, scroll-stopping, and unmistakably
+                  on-brand.
+                </p>
+                <div class="flex flex-wrap items-center gap-3">
+                  <a
+                    href="#contact"
+                    class="inline-flex items-center justify-center rounded-full bg-[#FF7A00] text-slate-950 text-xs md:text-sm font-medium tracking-tight px-5 py-2.5 hover:bg-[#ff8d26] transition"
+                  >
+                    Let’s Collaborate
+                  </a>
+                  <a
+                    href="#portfolio"
+                    class="inline-flex items-center justify-center rounded-full border border-slate-600 text-xs md:text-sm text-slate-100 font-medium tracking-tight px-5 py-2.5 hover:bg-slate-800/80 transition"
+                  >
+                    View Campaigns
+                  </a>
+                </div>
+                <div
+                  class="flex flex-wrap gap-6 text-xs md:text-sm text-slate-300"
+                >
+                  <div>
+                    <p class="font-semibold tracking-tight text-white">200+</p>
+                    <p class="text-slate-400">Creators activated</p>
+                  </div>
+                  <div>
+                    <p class="font-semibold tracking-tight text-white">4.8x</p>
+                    <p class="text-slate-400">Avg. engagement lift</p>
+                  </div>
+                  <div>
+                    <p class="font-semibold tracking-tight text-white">35+</p>
+                    <p class="text-slate-400">Brands partnered</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Hero Visual -->
+              <div class="relative">
+                <div
+                  class="absolute -top-16 -right-10 w-40 h-40 rounded-full bg-[#30A9DE]/10 blur-3xl"
+                ></div>
+                <div
+                  class="absolute -bottom-16 -left-10 w-40 h-40 rounded-full bg-[#E13E8F]/10 blur-3xl"
+                ></div>
+
+                <div
+                  class="relative rounded-3xl border border-slate-700/80 bg-slate-900/60 shadow-xl overflow-hidden"
+                >
+                  <div
+                    class="flex items-center justify-between px-4 py-3 border-b border-slate-800/80"
+                  >
+                    <div class="flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-[#FF7A00]"></span>
+                      <span class="w-2 h-2 rounded-full bg-[#30A9DE]"></span>
+                      <span class="w-2 h-2 rounded-full bg-[#E13E8F]"></span>
+                    </div>
+                    <span class="text-[0.7rem] text-slate-400 tracking-tight">
+                      Live Campaign Dashboard
+                    </span>
+                  </div>
+                  <div
+                    class="grid grid-cols-2 gap-6 p-4 md:p-6 text-xs md:text-sm"
+                  >
+                    <div class="space-y-4">
+                      <div>
+                        <p
+                          class="text-slate-400 text-[0.7rem] uppercase tracking-widest mb-1.5"
+                        >
+                          Creators online
+                        </p>
+                        <p
+                          class="text-xl font-semibold tracking-tight text-white"
+                        >
+                          47
+                        </p>
+                        <div
+                          class="mt-2 h-1.5 rounded-full bg-slate-800 overflow-hidden"
+                        >
+                          <div
+                            class="h-full w-3/4 rounded-full bg-[#30A9DE]"
+                          ></div>
+                        </div>
+                      </div>
+                      <div>
+                        <p
+                          class="text-slate-400 text-[0.7rem] uppercase tracking-widest mb-1.5"
+                        >
+                          Reach brewed today
+                        </p>
+                        <p
+                          class="text-xl font-semibold tracking-tight text-white"
+                        >
+                          1.2M
+                        </p>
+                      </div>
+                      <div>
+                        <p
+                          class="text-slate-400 text-[0.7rem] uppercase tracking-widest mb-1.5"
+                        >
+                          Avg. watch time
+                        </p>
+                        <p
+                          class="text-xl font-semibold tracking-tight text-white"
+                        >
+                          19s
+                        </p>
+                      </div>
+                    </div>
+                    <div class="space-y-4">
+                      <div class="flex items-center justify-between">
+                        <div>
+                          <p class="text-slate-300 font-medium tracking-tight">
+                            Cold Brew Launch
+                          </p>
+                          <p class="text-slate-500 text-[0.7rem]">
+                            UGC TikTok Series
+                          </p>
+                        </div>
+                        <span
+                          class="rounded-full bg-emerald-500/15 text-emerald-400 text-[0.7rem] px-2 py-1"
+                        >
+                          Live
+                        </span>
+                      </div>
+                      <div class="space-y-2">
+                        <div
+                          class="flex items-center justify-between text-[0.7rem] text-slate-400"
+                        >
+                          <span>Engagement rate</span>
+                          <span>7.3%</span>
+                        </div>
+                        <div
+                          class="h-1.5 rounded-full bg-slate-800 overflow-hidden"
+                        >
+                          <div
+                            class="h-full w-4/5 rounded-full bg-[#FF7A00]"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="space-y-2">
+                        <div
+                          class="flex items-center justify-between text-[0.7rem] text-slate-400"
+                        >
+                          <span>Content approval</span>
+                          <span>92%</span>
+                        </div>
+                        <div
+                          class="h-1.5 rounded-full bg-slate-800 overflow-hidden"
+                        >
+                          <div
+                            class="h-full w-11/12 rounded-full bg-[#30A9DE]"
+                          ></div>
+                        </div>
+                      </div>
+                      <button
+                        class="w-full inline-flex items-center justify-center rounded-full border border-slate-600 text-[0.7rem] text-slate-100 py-1.5 mt-1 hover:bg-slate-800/90 transition"
+                      >
+                        Preview campaign report
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- About Section (Home) -->
+          <section id="about" class="bg-slate-950">
+            <div
+              class="max-w-6xl mx-auto py-14 md:py-16 px-4 md:px-6 grid md:grid-cols-[1.2fr,1fr] gap-10 lg:gap-14 items-center"
+            >
+              <div>
+                <h2
+                  class="text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight text-white mb-4"
+                >
+                  Coffee-fueled minds, creator-led thinking.
+                </h2>
+                <p
+                  class="text-sm md:text-base text-slate-200 mb-5 leading-relaxed"
+                >
+                  CoffeeConnect is a creative marketing agency built at the
+                  intersection of culture and caffeine. We architect influencer
+                  campaigns, social storytelling, and content systems that work
+                  across platforms and formats.
+                </p>
+                <p
+                  class="text-sm md:text-base text-slate-300 mb-6 leading-relaxed"
+                >
+                  From scrappy startups to scaling brands, we help you show up
+                  where your audience scrolls, swipes, and saves—without losing
+                  your voice in the noise.
+                </p>
+                <div class="grid grid-cols-3 gap-4 text-xs md:text-sm">
+                  <div
+                    class="rounded-2xl border border-slate-800 bg-slate-900/60 p-3 md:p-4"
+                  >
+                    <p
+                      class="text-lg md:text-xl font-semibold tracking-tight text-white"
+                    >
+                      6+
+                    </p>
+                    <p class="text-slate-400 mt-1">
+                      Years in creator marketing
+                    </p>
+                  </div>
+                  <div
+                    class="rounded-2xl border border-slate-800 bg-slate-900/60 p-3 md:p-4"
+                  >
+                    <p
+                      class="text-lg md:text-xl font-semibold tracking-tight text-white"
+                    >
+                      120+
+                    </p>
+                    <p class="text-slate-400 mt-1">Campaigns brewed</p>
+                  </div>
+                  <div
+                    class="rounded-2xl border border-slate-800 bg-slate-900/60 p-3 md:p-4"
+                  >
+                    <p
+                      class="text-lg md:text-xl font-semibold tracking-tight text-white"
+                    >
+                      18
+                    </p>
+                    <p class="text-slate-400 mt-1">Markets activated</p>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div
+                  class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4"
+                >
+                  <p class="text-xs md:text-sm text-slate-300">
+                    “Think of us as your in-house social team—just with more
+                    caffeine, more creator relationships, and fewer internal
+                    Slack threads.”
+                  </p>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div
+                    class="h-9 w-9 rounded-full bg-gradient-to-tr from-[#FF7A00] to-[#30A9DE] flex items-center justify-center text-[0.7rem] font-semibold tracking-tight"
+                  >
+                    CC
+                  </div>
+                  <div>
+                    <p
+                      class="text-xs md:text-sm font-medium tracking-tight text-white"
+                    >
+                      CoffeeConnect Studio
+                    </p>
+                    <p class="text-[0.7rem] text-slate-400">
+                      Strategy, Content, Creator Partnerships
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Services Section (Home) -->
+          <section
+            id="services"
+            class="bg-slate-950/95 border-t border-slate-900/80"
+          >
+            <div class="max-w-6xl mx-auto py-14 md:py-16 px-4 md:px-6">
+              <div
+                class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10"
+              >
+                <div>
+                  <h2
+                    class="text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight text-white mb-2"
+                  >
+                    Services brewed for scroll-stopping brands.
+                  </h2>
+                  <p class="text-sm md:text-base text-slate-300 max-w-xl">
+                    From strategy to reporting, we plug into your team as the
+                    social and influencer arm you always wanted.
+                  </p>
+                </div>
+                <a
+                  href="#services-page"
+                  class="inline-flex items-center gap-2 text-xs md:text-sm text-[#30A9DE] hover:text-[#52b8e4]"
+                >
+                  View all services
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+
+              <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+                <!-- Service Card 1 -->
+                <article
+                  class="group rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5 hover:border-[#30A9DE]/80 hover:-translate-y-1 transition"
+                >
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="rounded-xl bg-slate-800/80 p-2">
+                      <i
+                        data-lucide="sparkles"
+                        class="w-4 h-4 text-[#30A9DE]"
+                      ></i>
+                    </div>
+                    <span class="text-[0.7rem] text-slate-400">Strategy</span>
+                  </div>
+                  <h3
+                    class="text-sm md:text-base font-semibold tracking-tight text-white mb-2"
+                  >
+                    Social &amp; Content Strategy
+                  </h3>
+                  <p
+                    class="text-xs md:text-sm text-slate-300 mb-3 leading-relaxed"
+                  >
+                    Platform-native roadmaps, editorial calendars, and content
+                    series designed to match your brand’s caffeine level.
+                  </p>
+                  <button
+                    class="text-[0.7rem] text-[#30A9DE] group-hover:text-[#52b8e4] inline-flex items-center gap-1"
+                  >
+                    Learn more
+                    <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                  </button>
+                </article>
+                <!-- Service Card 2 -->
+                <article
+                  class="group rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5 hover:border-[#30A9DE]/80 hover:-translate-y-1 transition"
+                >
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="rounded-xl bg-slate-800/80 p-2">
+                      <i data-lucide="users" class="w-4 h-4 text-[#FF7A00]"></i>
+                    </div>
+                    <span class="text-[0.7rem] text-slate-400">
+                      Influencers
+                    </span>
+                  </div>
+                  <h3
+                    class="text-sm md:text-base font-semibold tracking-tight text-white mb-2"
+                  >
+                    Influencer Campaigns
+                  </h3>
+                  <p
+                    class="text-xs md:text-sm text-slate-300 mb-3 leading-relaxed"
+                  >
+                    End‑to‑end creator sourcing, briefing, management, and
+                    reporting across TikTok, Instagram, YouTube, and beyond.
+                  </p>
+                  <button
+                    class="text-[0.7rem] text-[#30A9DE] group-hover:text-[#52b8e4] inline-flex items-center gap-1"
+                  >
+                    Learn more
+                    <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                  </button>
+                </article>
+                <!-- Service Card 3 -->
+                <article
+                  class="group rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5 hover:border-[#30A9DE]/80 hover:-translate-y-1 transition"
+                >
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="rounded-xl bg-slate-800/80 p-2">
+                      <i
+                        data-lucide="pen-tool"
+                        class="w-4 h-4 text-[#E13E8F]"
+                      ></i>
+                    </div>
+                    <span class="text-[0.7rem] text-slate-400">Branding</span>
+                  </div>
+                  <h3
+                    class="text-sm md:text-base font-semibold tracking-tight text-white mb-2"
+                  >
+                    Branding &amp; Design Systems
+                  </h3>
+                  <p
+                    class="text-xs md:text-sm text-slate-300 mb-3 leading-relaxed"
+                  >
+                    Visual identities, social templates, and guidelines that
+                    keep every post and partnership on-brand.
+                  </p>
+                  <button
+                    class="text-[0.7rem] text-[#30A9DE] group-hover:text-[#52b8e4] inline-flex items-center gap-1"
+                  >
+                    Learn more
+                    <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                  </button>
+                </article>
+                <!-- Service Card 4 -->
+                <article
+                  class="group rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5 hover:border-[#30A9DE]/80 hover:-translate-y-1 transition"
+                >
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="rounded-xl bg-slate-800/80 p-2">
+                      <i
+                        data-lucide="rocket"
+                        class="w-4 h-4 text-[#30A9DE]"
+                      ></i>
+                    </div>
+                    <span class="text-[0.7rem] text-slate-400">Paid</span>
+                  </div>
+                  <h3
+                    class="text-sm md:text-base font-semibold tracking-tight text-white mb-2"
+                  >
+                    Paid Social &amp; Amplification
+                  </h3>
+                  <p
+                    class="text-xs md:text-sm text-slate-300 mb-3 leading-relaxed"
+                  >
+                    Turn top‑performing content into always‑on performance
+                    engines with smart media and whitelisting.
+                  </p>
+                  <button
+                    class="text-[0.7rem] text-[#30A9DE] group-hover:text-[#52b8e4] inline-flex items-center gap-1"
+                  >
+                    Learn more
+                    <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                  </button>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <!-- Portfolio Section (Home) -->
+          <section
+            id="portfolio"
+            class="bg-slate-950 border-t border-slate-900/80"
+          >
+            <div class="max-w-6xl mx-auto py-14 md:py-16 px-4 md:px-6">
+              <div
+                class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8"
+              >
+                <div>
+                  <h2
+                    class="text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight text-white mb-2"
+                  >
+                    Campaigns that warm up cold audiences.
+                  </h2>
+                  <p class="text-sm md:text-base text-slate-300 max-w-xl">
+                    A taste of the launches, always‑on programs, and brand
+                    moments we’ve brewed with our partners.
+                  </p>
+                </div>
+                <button
+                  class="inline-flex items-center gap-2 rounded-full border border-slate-700 text-xs md:text-sm text-slate-100 px-4 py-2 hover:bg-slate-800/80 transition"
+                >
+                  View all case studies
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+
+              <div class="grid md:grid-cols-3 gap-4 lg:gap-5">
+                <!-- Project 1 -->
+                <article
+                  class="group rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden hover:border-[#30A9DE]/80 transition"
+                >
+                  <div
+                    class="relative h-32 md:h-40 bg-gradient-to-tr from-[#FF7A00]/40 via-slate-900 to-[#30A9DE]/40 flex items-end"
+                  >
+                    <div
+                      class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(15,23,42,0)_0,_rgba(15,23,42,0.9)_55%)]"
+                    ></div>
+                    <div class="relative p-3">
+                      <span
+                        class="inline-flex items-center rounded-full bg-slate-950/70 text-[0.6rem] text-slate-200 px-2 py-0.5 tracking-tight"
+                      >
+                        Beverage · TikTok UGC
+                      </span>
+                    </div>
+                  </div>
+                  <div class="p-4">
+                    <h3
+                      class="text-sm md:text-base font-semibold tracking-tight text-white mb-1.5"
+                    >
+                      Cold Brew Launch with Micro‑Creators
+                    </h3>
+                    <p class="text-xs md:text-sm text-slate-300 mb-3">
+                      Built a 3‑week launch moment with 42 creators, driving
+                      9.1M views and a 6.4% average engagement rate.
+                    </p>
+                    <div
+                      class="flex items-center justify-between text-[0.7rem] text-slate-400"
+                    >
+                      <span>+54% lift in branded search</span>
+                      <button
+                        class="inline-flex items-center gap-1 text-[#30A9DE] hover:text-[#52b8e4]"
+                      >
+                        View case
+                        <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+                <!-- Project 2 -->
+                <article
+                  class="group rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden hover:border-[#30A9DE]/80 transition"
+                >
+                  <div
+                    class="relative h-32 md:h-40 bg-gradient-to-tr from-[#E13E8F]/35 via-slate-900 to-[#30A9DE]/35 flex items-end"
+                  >
+                    <div
+                      class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(15,23,42,0)_0,_rgba(15,23,42,0.9)_55%)]"
+                    ></div>
+                    <div class="relative p-3">
+                      <span
+                        class="inline-flex items-center rounded-full bg-slate-950/70 text-[0.6rem] text-slate-200 px-2 py-0.5 tracking-tight"
+                      >
+                        SaaS · Always‑on
+                      </span>
+                    </div>
+                  </div>
+                  <div class="p-4">
+                    <h3
+                      class="text-sm md:text-base font-semibold tracking-tight text-white mb-1.5"
+                    >
+                      Thought‑Leadership Social Engine
+                    </h3>
+                    <p class="text-xs md:text-sm text-slate-300 mb-3">
+                      Turned a B2B platform into a must‑follow feed with
+                      educational short‑form content and expert‑led series.
+                    </p>
+                    <div
+                      class="flex items-center justify-between text-[0.7rem] text-slate-400"
+                    >
+                      <span>3.2x engagement in 90 days</span>
+                      <button
+                        class="inline-flex items-center gap-1 text-[#30A9DE] hover:text-[#52b8e4]"
+                      >
+                        View case
+                        <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+                <!-- Project 3 -->
+                <article
+                  class="group rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden hover:border-[#30A9DE]/80 transition"
+                >
+                  <div
+                    class="relative h-32 md:h-40 bg-gradient-to-tr from-[#30A9DE]/40 via-slate-900 to-[#FF7A00]/40 flex items-end"
+                  >
+                    <div
+                      class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(15,23,42,0)_0,_rgba(15,23,42,0.9)_55%)]"
+                    ></div>
+                    <div class="relative p-3">
+                      <span
+                        class="inline-flex items-center rounded-full bg-slate-950/70 text-[0.6rem] text-slate-200 px-2 py-0.5 tracking-tight"
+                      >
+                        DTC · Launch
+                      </span>
+                    </div>
+                  </div>
+                  <div class="p-4">
+                    <h3
+                      class="text-sm md:text-base font-semibold tracking-tight text-white mb-1.5"
+                    >
+                      Creator‑led Product Drop
+                    </h3>
+                    <p class="text-xs md:text-sm text-slate-300 mb-3">
+                      Partnered with lifestyle creators to sell out a limited
+                      product line in under 48 hours.
+                    </p>
+                    <div
+                      class="flex items-center justify-between text-[0.7rem] text-slate-400"
+                    >
+                      <span>Sold out in 2 days</span>
+                      <button
+                        class="inline-flex items-center gap-1 text-[#30A9DE] hover:text-[#52b8e4]"
+                      >
+                        View case
+                        <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <!-- Team Section (Home) -->
+          <section
+            id="team"
+            class="bg-slate-950/95 border-t border-slate-900/80"
+          >
+            <div class="max-w-6xl mx-auto py-14 md:py-16 px-4 md:px-6">
+              <div
+                class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8"
+              >
+                <div>
+                  <h2
+                    class="text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight text-white mb-2"
+                  >
+                    The crew behind the brew.
+                  </h2>
+                  <p class="text-sm md:text-base text-slate-300 max-w-xl">
+                    A compact team of strategists, creatives, and creator
+                    managers obsessed with what works on social.
+                  </p>
+                </div>
+                <a
+                  href="#team-page"
+                  class="inline-flex items-center gap-2 text-xs md:text-sm text-[#30A9DE] hover:text-[#52b8e4]"
+                >
+                  Meet the full team
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+
+              <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+                <!-- Person 1 -->
+                <article
+                  class="group rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden hover:border-[#30A9DE]/80 transition"
+                >
+                  <div
+                    class="h-28 bg-gradient-to-br from-[#FF7A00]/50 via-slate-900 to-[#30A9DE]/40"
+                  ></div>
+                  <div class="p-4">
+                    <h3
+                      class="text-sm md:text-base font-semibold tracking-tight text-white"
+                    >
+                      Mira Patel
+                    </h3>
+                    <p class="text-xs text-slate-400 mb-3">
+                      Founder &amp; Head of Strategy
+                    </p>
+                    <p class="text-xs md:text-sm text-slate-300">
+                      Former in‑house social lead for high‑growth startups, now
+                      architecting cross‑platform campaigns for CoffeeConnect
+                      partners.
+                    </p>
+                  </div>
+                </article>
+                <!-- Person 2 -->
+                <article
+                  class="group rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden hover:border-[#30A9DE]/80 transition"
+                >
+                  <div
+                    class="h-28 bg-gradient-to-br from-[#30A9DE]/45 via-slate-900 to-[#E13E8F]/45"
+                  ></div>
+                  <div class="p-4">
+                    <h3
+                      class="text-sm md:text-base font-semibold tracking-tight text-white"
+                    >
+                      Lucas Green
+                    </h3>
+                    <p class="text-xs text-slate-400 mb-3">Creative Director</p>
+                    <p class="text-xs md:text-sm text-slate-300">
+                      Leads content direction, scripting, and visual language
+                      for short‑form and long‑form social campaigns.
+                    </p>
+                  </div>
+                </article>
+                <!-- Person 3 -->
+                <article
+                  class="group rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden hover:border-[#30A9DE]/80 transition"
+                >
+                  <div
+                    class="h-28 bg-gradient-to-br from-[#E13E8F]/45 via-slate-900 to-[#FF7A00]/40"
+                  ></div>
+                  <div class="p-4">
+                    <h3
+                      class="text-sm md:text-base font-semibold tracking-tight text-white"
+                    >
+                      Amina Sol
+                    </h3>
+                    <p class="text-xs text-slate-400 mb-3">
+                      Creator Partnerships Lead
+                    </p>
+                    <p class="text-xs md:text-sm text-slate-300">
+                      Manages CoffeeConnect’s creator community and ensures
+                      every collaboration feels authentic and on‑brief.
+                    </p>
+                  </div>
+                </article>
+                <!-- Person 4 -->
+                <article
+                  class="group rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden hover:border-[#30A9DE]/80 transition"
+                >
+                  <div
+                    class="h-28 bg-gradient-to-br from-[#30A9DE]/40 via-slate-900 to-[#FF7A00]/45"
+                  ></div>
+                  <div class="p-4">
+                    <h3
+                      class="text-sm md:text-base font-semibold tracking-tight text-white"
+                    >
+                      Noah Chen
+                    </h3>
+                    <p class="text-xs text-slate-400 mb-3">
+                      Performance &amp; Insights
+                    </p>
+                    <p class="text-xs md:text-sm text-slate-300">
+                      Turns content data into clear dashboards, optimization
+                      plans, and board‑friendly reporting.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <!-- Testimonials Section (Home) -->
+          <section
+            id="testimonials"
+            class="bg-slate-950 border-t border-slate-900/80"
+          >
+            <div class="max-w-6xl mx-auto py-14 md:py-16 px-4 md:px-6">
+              <div
+                class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6"
+              >
+                <div>
+                  <h2
+                    class="text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight text-white mb-2"
+                  >
+                    Brands that sip with us.
+                  </h2>
+                  <p class="text-sm md:text-base text-slate-300 max-w-xl">
+                    A few words from teams that trusted CoffeeConnect to lead
+                    their creator and social efforts.
+                  </p>
+                </div>
+                <div class="flex items-center gap-2">
+                  <button
+                    id="testimonialPrev"
+                    class="inline-flex items-center justify-center rounded-full border border-slate-700 w-8 h-8 text-slate-200 hover:bg-slate-800/80 transition"
+                    aria-label="Previous testimonial"
+                  >
+                    <i data-lucide="chevron-left" class="w-3.5 h-3.5"></i>
+                  </button>
+                  <button
+                    id="testimonialNext"
+                    class="inline-flex items-center justify-center rounded-full border border-slate-700 w-8 h-8 text-slate-200 hover:bg-slate-800/80 transition"
+                    aria-label="Next testimonial"
+                  >
+                    <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="relative">
+                <div
+                  id="testimonialTrack"
+                  class="flex transition-transform duration-500 ease-out"
+                >
+                  <!-- Testimonial 1 -->
+                  <article class="shrink-0 w-full md:w-1/2 lg:w-1/3 pr-4">
+                    <div
+                      class="h-full rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5"
+                    >
+                      <p
+                        class="text-xs md:text-sm text-slate-200 mb-4 leading-relaxed"
+                      >
+                        “CoffeeConnect rebuilt our creator strategy from the
+                        ground up. We now have an always‑on presence that
+                        actually feels like our brand instead of random posts.”
+                      </p>
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="h-9 w-9 rounded-full bg-gradient-to-tr from-[#FF7A00] to-[#30A9DE]"
+                        ></div>
+                        <div>
+                          <p
+                            class="text-xs md:text-sm font-medium tracking-tight text-white"
+                          >
+                            Head of Marketing
+                          </p>
+                          <p class="text-[0.7rem] text-slate-400">
+                            DTC Beverage Brand
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <!-- Testimonial 2 -->
+                  <article class="shrink-0 w-full md:w-1/2 lg:w-1/3 pr-4">
+                    <div
+                      class="h-full rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5"
+                    >
+                      <p
+                        class="text-xs md:text-sm text-slate-200 mb-4 leading-relaxed"
+                      >
+                        “They speak ‘creator’ and ‘C‑suite’ fluently. The
+                        reporting, structure, and creative ideas made it easy to
+                        get buy‑in internally.”
+                      </p>
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="h-9 w-9 rounded-full bg-gradient-to-tr from-[#E13E8F] to-[#30A9DE]"
+                        ></div>
+                        <div>
+                          <p
+                            class="text-xs md:text-sm font-medium tracking-tight text-white"
+                          >
+                            VP Growth
+                          </p>
+                          <p class="text-[0.7rem] text-slate-400">
+                            B2B SaaS Platform
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <!-- Testimonial 3 -->
+                  <article class="shrink-0 w-full md:w-1/2 lg:w-1/3 pr-4">
+                    <div
+                      class="h-full rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5"
+                    >
+                      <p
+                        class="text-xs md:text-sm text-slate-200 mb-4 leading-relaxed"
+                      >
+                        “Our launch week felt like a cultural moment instead of
+                        just another campaign. CoffeeConnect orchestrated every
+                        detail.”
+                      </p>
+                      <div class="flex items-center gap-3">
+                        <div
+                          class="h-9 w-9 rounded-full bg-gradient-to-tr from-[#FF7A00] to-[#E13E8F]"
+                        ></div>
+                        <div>
+                          <p
+                            class="text-xs md:text-sm font-medium tracking-tight text-white"
+                          >
+                            Brand Director
+                          </p>
+                          <p class="text-[0.7rem] text-slate-400">
+                            Lifestyle Retailer
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- CTA Section (Home) -->
+          <section
+            id="home-cta"
+            class="bg-gradient-to-r from-[#1F2D4A] via-slate-950 to-[#1F2D4A] border-t border-slate-900/80"
+          >
+            <div
+              class="max-w-6xl mx-auto py-12 md:py-14 px-4 md:px-6 flex flex-col md:flex-row items-center justify-between gap-6"
+            >
+              <div>
+                <h2
+                  class="text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight text-white mb-2"
+                >
+                  Let’s brew something bold together.
+                </h2>
+                <p class="text-sm md:text-base text-slate-200 max-w-xl">
+                  Tell us about your next launch, product, or always‑on
+                  goals—and we’ll share how CoffeeConnect can help.
+                </p>
+              </div>
+              <div class="flex flex-wrap items-center gap-3">
+                <a
+                  href="#contact"
+                  class="inline-flex items-center justify-center rounded-full bg-[#FF7A00] text-slate-950 text-xs md:text-sm font-medium tracking-tight px-5 py-2.5 hover:bg-[#ff8d26] transition"
+                >
+                  Let’s Brew Something Great
+                </a>
+                <a
+                  href="#services"
+                  class="inline-flex items-center justify-center rounded-full border border-slate-600 text-xs md:text-sm text-slate-100 px-4 py-2 hover:bg-slate-800/80 transition"
+                >
+                  Explore services
+                </a>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- SERVICES PAGE (Anchor: #services-page) -->
+        <section
+          id="services-page"
+          class="bg-slate-950 border-t border-slate-900/80"
+        >
+          <!-- Page Hero -->
+          <div class="max-w-6xl mx-auto py-14 md:py-16 px-4 md:px-6">
+            <div
+              class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10"
+            >
+              <div>
+                <p
+                  class="text-[0.7rem] md:text-xs uppercase tracking-[0.2rem] text-[#30A9DE] mb-2"
+                >
+                  Services
+                </p>
+                <h2
+                  class="text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight text-white mb-3"
+                >
+                  Every phase of the funnel, caffeinated.
+                </h2>
+                <p class="text-sm md:text-base text-slate-300 max-w-xl">
+                  Whether you need a full campaign or just a smarter way to show
+                  up on social, we plug in where you need us most.
+                </p>
+              </div>
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center rounded-full bg-[#FF7A00] text-slate-950 text-xs md:text-sm font-medium tracking-tight px-5 py-2.5 hover:bg-[#ff8d26] transition"
+              >
+                Book a strategy call
+              </a>
+            </div>
+
+            <!-- Services Grid Detailed -->
+            <div class="grid md:grid-cols-2 gap-5 mb-10">
+              <!-- Detailed Service 1 -->
+              <article
+                class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-6"
+              >
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="rounded-xl bg-slate-800/80 p-2">
+                    <i
+                      data-lucide="layout-dashboard"
+                      class="w-4 h-4 text-[#30A9DE]"
+                    ></i>
+                  </div>
+                  <div>
+                    <h3
+                      class="text-sm md:text-base font-semibold tracking-tight text-white"
+                    >
+                      Social Playbooks &amp; Content Strategy
+                    </h3>
+                    <p class="text-[0.7rem] text-slate-400">
+                      Channels: Instagram, TikTok, LinkedIn, YouTube, X
+                    </p>
+                  </div>
+                </div>
+                <p
+                  class="text-xs md:text-sm text-slate-300 mb-3 leading-relaxed"
+                >
+                  We audit your current presence, clarify your voice, and map
+                  content pillars that actually ladder up to business goals.
+                </p>
+                <ul
+                  class="text-xs md:text-sm text-slate-300 grid sm:grid-cols-2 gap-x-6 gap-y-1.5"
+                >
+                  <li class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#30A9DE]"></span>
+                    Channel and competitor audit
+                  </li>
+                  <li class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#30A9DE]"></span>
+                    Content pillars &amp; posting cadence
+                  </li>
+                  <li class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#30A9DE]"></span>
+                    Asset &amp; production roadmap
+                  </li>
+                  <li class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#30A9DE]"></span>
+                    Measurement framework
+                  </li>
+                </ul>
+              </article>
+              <!-- Detailed Service 2 -->
+              <article
+                class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-6"
+              >
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="rounded-xl bg-slate-800/80 p-2">
+                    <i
+                      data-lucide="megaphone"
+                      class="w-4 h-4 text-[#FF7A00]"
+                    ></i>
+                  </div>
+                  <div>
+                    <h3
+                      class="text-sm md:text-base font-semibold tracking-tight text-white"
+                    >
+                      Influencer &amp; Creator Campaigns
+                    </h3>
+                    <p class="text-[0.7rem] text-slate-400">
+                      Channels: TikTok, Instagram, YouTube
+                    </p>
+                  </div>
+                </div>
+                <p
+                  class="text-xs md:text-sm text-slate-300 mb-3 leading-relaxed"
+                >
+                  We design and manage creator programs from concept to
+                  contracts, keeping everything on‑brand and on‑time.
+                </p>
+                <ul
+                  class="text-xs md:text-sm text-slate-300 grid sm:grid-cols-2 gap-x-6 gap-y-1.5"
+                >
+                  <li class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#FF7A00]"></span>
+                    Creator discovery &amp; vetting
+                  </li>
+                  <li class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#FF7A00]"></span>
+                    Briefs, contracts &amp; usage rights
+                  </li>
+                  <li class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#FF7A00]"></span>
+                    Campaign orchestration
+                  </li>
+                  <li class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#FF7A00]"></span>
+                    Performance dashboards
+                  </li>
+                </ul>
+              </article>
+              <!-- Detailed Service 3 -->
+              <article
+                class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-6"
+              >
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="rounded-xl bg-slate-800/80 p-2">
+                    <i data-lucide="palette" class="w-4 h-4 text-[#E13E8F]"></i>
+                  </div>
+                  <div>
+                    <h3
+                      class="text-sm md:text-base font-semibold tracking-tight text-white"
+                    >
+                      Brand &amp; Social Design Systems
+                    </h3>
+                    <p class="text-[0.7rem] text-slate-400">
+                      Deliverables: Kits, templates, guidelines
+                    </p>
+                  </div>
+                </div>
+                <p
+                  class="text-xs md:text-sm text-slate-300 mb-3 leading-relaxed"
+                >
+                  We create visual foundations that make it easy for your team
+                  or creators to design on‑brand content at scale.
+                </p>
+                <ul
+                  class="text-xs md:text-sm text-slate-300 grid sm:grid-cols-2 gap-x-6 gap-y-1.5"
+                >
+                  <li class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#E13E8F]"></span>
+                    Logo &amp; color refinement
+                  </li>
+                  <li class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#E13E8F]"></span>
+                    Social post &amp; story templates
+                  </li>
+                  <li class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#E13E8F]"></span>
+                    Creator‑friendly brand playbooks
+                  </li>
+                  <li class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#E13E8F]"></span>
+                    Asset &amp; typography system
+                  </li>
+                </ul>
+              </article>
+              <!-- Detailed Service 4 -->
+              <article
+                class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-6"
+              >
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="rounded-xl bg-slate-800/80 p-2">
+                    <i data-lucide="target" class="w-4 h-4 text-[#30A9DE]"></i>
+                  </div>
+                  <div>
+                    <h3
+                      class="text-sm md:text-base font-semibold tracking-tight text-white"
+                    >
+                      Paid Social &amp; Creator Whitelisting
+                    </h3>
+                    <p class="text-[0.7rem] text-slate-400">
+                      Platforms: Meta, TikTok, Google
+                    </p>
+                  </div>
+                </div>
+                <p
+                  class="text-xs md:text-sm text-slate-300 mb-3 leading-relaxed"
+                >
+                  We amplify top‑performing posts and creator assets through
+                  media buying and paid partnerships.
+                </p>
+                <ul
+                  class="text-xs md:text-sm text-slate-300 grid sm:grid-cols-2 gap-x-6 gap-y-1.5"
+                >
+                  <li class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#30A9DE]"></span>
+                    Paid social strategy
+                  </li>
+                  <li class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#30A9DE]"></span>
+                    Whitelisting &amp; dark posts
+                  </li>
+                  <li class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#30A9DE]"></span>
+                    Creative testing loops
+                  </li>
+                  <li class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#30A9DE]"></span>
+                    ROAS reporting
+                  </li>
+                </ul>
+              </article>
+            </div>
+
+            <!-- Process Section -->
+            <div
+              class="border border-slate-800 rounded-3xl bg-slate-900/60 p-5 md:p-6 mb-8"
+            >
+              <div
+                class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4"
+              >
+                <div>
+                  <h3
+                    class="text-sm md:text-base font-semibold tracking-tight text-white mb-1.5"
+                  >
+                    How we work together
+                  </h3>
+                  <p class="text-xs md:text-sm text-slate-300 max-w-2xl">
+                    A clear process from “we might need help” to “we’re running
+                    with this.”
+                  </p>
+                </div>
+              </div>
+              <div class="grid md:grid-cols-4 gap-4 text-xs md:text-sm">
+                <div>
+                  <p class="text-[0.7rem] text-slate-400 mb-1.5">
+                    01 · Discovery
+                  </p>
+                  <p class="text-slate-200">
+                    We map your audience, goals, and current content or creator
+                    efforts.
+                  </p>
+                </div>
+                <div>
+                  <p class="text-[0.7rem] text-slate-400 mb-1.5">
+                    02 · Blueprint
+                  </p>
+                  <p class="text-slate-200">
+                    We share a recommended approach, timeline, and success
+                    metrics.
+                  </p>
+                </div>
+                <div>
+                  <p class="text-[0.7rem] text-slate-400 mb-1.5">03 · Brew</p>
+                  <p class="text-slate-200">
+                    Our team executes campaigns, content, and creator programs.
+                  </p>
+                </div>
+                <div>
+                  <p class="text-[0.7rem] text-slate-400 mb-1.5">04 · Refine</p>
+                  <p class="text-slate-200">
+                    We iterate based on data, then scale what’s working.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA -->
+            <div
+              class="flex flex-col md:flex-row md:items-center justify-between gap-4"
+            >
+              <p class="text-xs md:text-sm text-slate-300">
+                Ready for a fresh take on social and creator marketing?
+              </p>
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center rounded-full border border-[#30A9DE] text-xs md:text-sm text-[#30A9DE] px-4 py-2 hover:bg-[#30A9DE]/10 transition"
+              >
+                Share your brief
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- PORTFOLIO PAGE -->
+        <section
+          id="portfolio-page"
+          class="bg-slate-950 border-t border-slate-900/80"
+        >
+          <div class="max-w-6xl mx-auto py-14 md:py-16 px-4 md:px-6">
+            <!-- Hero -->
+            <div
+              class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8"
+            >
+              <div>
+                <p
+                  class="text-[0.7rem] md:text-xs uppercase tracking-[0.2rem] text-[#30A9DE] mb-2"
+                >
+                  Portfolio
+                </p>
+                <h2
+                  class="text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight text-white mb-3"
+                >
+                  Case studies brewed with our partners.
+                </h2>
+                <p class="text-sm md:text-base text-slate-300 max-w-xl">
+                  Filter by industry or objective to explore how we collaborate
+                  with brands.
+                </p>
+              </div>
+            </div>
+
+            <!-- Filters -->
+            <div
+              class="flex flex-wrap items-center gap-2 mb-8 text-xs md:text-sm"
+            >
+              <button
+                class="filter-btn rounded-full border border-[#30A9DE] bg-[#30A9DE]/10 text-[#30A9DE] px-3 py-1"
+                data-filter="all"
+              >
+                All
+              </button>
+              <button
+                class="filter-btn rounded-full border border-slate-700 text-slate-200 px-3 py-1"
+                data-filter="dtc"
+              >
+                DTC
+              </button>
+              <button
+                class="filter-btn rounded-full border border-slate-700 text-slate-200 px-3 py-1"
+                data-filter="saas"
+              >
+                SaaS
+              </button>
+              <button
+                class="filter-btn rounded-full border border-slate-700 text-slate-200 px-3 py-1"
+                data-filter="beverage"
+              >
+                Beverage
+              </button>
+            </div>
+
+            <!-- Project Grid -->
+            <div class="grid md:grid-cols-3 gap-4 lg:gap-5 mb-10">
+              <article
+                class="portfolio-item rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden hover:border-[#30A9DE]/80 transition"
+                data-category="beverage dtc"
+              >
+                <div
+                  class="h-32 bg-gradient-to-tr from-[#FF7A00]/45 via-slate-900 to-[#30A9DE]/40"
+                ></div>
+                <div class="p-4">
+                  <p class="text-[0.7rem] text-slate-400 mb-1">
+                    Beverage · Launch
+                  </p>
+                  <h3
+                    class="text-sm md:text-base font-semibold tracking-tight text-white mb-2"
+                  >
+                    Micro‑Creator Cold Brew Launch
+                  </h3>
+                  <p class="text-xs md:text-sm text-slate-300 mb-3">
+                    Multi‑wave TikTok and Reels push to introduce a new cold
+                    brew SKU.
+                  </p>
+                  <button
+                    class="inline-flex items-center gap-1 text-[0.7rem] text-[#30A9DE] hover:text-[#52b8e4]"
+                  >
+                    Open case study
+                    <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                  </button>
+                </div>
+              </article>
+
+              <article
+                class="portfolio-item rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden hover:border-[#30A9DE]/80 transition"
+                data-category="saas"
+              >
+                <div
+                  class="h-32 bg-gradient-to-tr from-[#30A9DE]/45 via-slate-900 to-[#E13E8F]/40"
+                ></div>
+                <div class="p-4">
+                  <p class="text-[0.7rem] text-slate-400 mb-1">
+                    SaaS · Evergreen
+                  </p>
+                  <h3
+                    class="text-sm md:text-base font-semibold tracking-tight text-white mb-2"
+                  >
+                    Thought‑Leadership Video Series
+                  </h3>
+                  <p class="text-xs md:text-sm text-slate-300 mb-3">
+                    Founder‑led short‑form education series across LinkedIn and
+                    TikTok.
+                  </p>
+                  <button
+                    class="inline-flex items-center gap-1 text-[0.7rem] text-[#30A9DE] hover:text-[#52b8e4]"
+                  >
+                    Open case study
+                    <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                  </button>
+                </div>
+              </article>
+
+              <article
+                class="portfolio-item rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden hover:border-[#30A9DE]/80 transition"
+                data-category="dtc"
+              >
+                <div
+                  class="h-32 bg-gradient-to-tr from-[#E13E8F]/45 via-slate-900 to-[#FF7A00]/45"
+                ></div>
+                <div class="p-4">
+                  <p class="text-[0.7rem] text-slate-400 mb-1">
+                    DTC · Product Drop
+                  </p>
+                  <h3
+                    class="text-sm md:text-base font-semibold tracking-tight text-white mb-2"
+                  >
+                    Capsule Collection Sell‑Out
+                  </h3>
+                  <p class="text-xs md:text-sm text-slate-300 mb-3">
+                    Creator whitelisting and UGC ads for a limited‑run fashion
+                    drop.
+                  </p>
+                  <button
+                    class="inline-flex items-center gap-1 text-[0.7rem] text-[#30A9DE] hover:text-[#52b8e4]"
+                  >
+                    Open case study
+                    <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <!-- CTA -->
+            <div
+              class="flex flex-col md:flex-row md:items-center justify-between gap-4"
+            >
+              <p class="text-xs md:text-sm text-slate-300">
+                Want a deeper dive into our case studies? We’ll walk you through
+                what’s most relevant to your goals.
+              </p>
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center rounded-full border border-slate-700 text-xs md:text-sm text-slate-100 px-4 py-2 hover:bg-slate-800/80 transition"
+              >
+                Request a portfolio walk‑through
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ABOUT PAGE -->
+        <section
+          id="about-page"
+          class="bg-slate-950 border-t border-slate-900/80"
+        >
+          <div class="max-w-6xl mx-auto py-14 md:py-16 px-4 md:px-6">
+            <!-- Hero -->
+            <div class="grid md:grid-cols-2 gap-8 mb-10 items-end">
+              <div>
+                <p
+                  class="text-[0.7rem] md:text-xs uppercase tracking-[0.2rem] text-[#30A9DE] mb-2"
+                >
+                  About CoffeeConnect
+                </p>
+                <h2
+                  class="text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight text-white mb-3"
+                >
+                  Born from late‑night brainstorms and early‑morning espresso.
+                </h2>
+                <p class="text-sm md:text-base text-slate-300">
+                  CoffeeConnect began as a small studio helping brands
+                  experiment on social. Today, we’re a dedicated team focused on
+                  making influencer and content programs feel strategic,
+                  measurable, and fun.
+                </p>
+              </div>
+              <div
+                class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5"
+              >
+                <p class="text-xs md:text-sm text-slate-200 leading-relaxed">
+                  We sit at the sweet spot where brand, community, and creators
+                  overlap—building campaigns that respect your brand book and
+                  your audience’s attention span.
+                </p>
+              </div>
+            </div>
+
+            <!-- Story / Mission / Vision -->
+            <div class="grid md:grid-cols-3 gap-5 mb-10 text-xs md:text-sm">
+              <div
+                class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5"
+              >
+                <h3
+                  class="text-sm md:text-base font-semibold tracking-tight text-white mb-2"
+                >
+                  Our Story
+                </h3>
+                <p class="text-slate-300">
+                  Started in a neighborhood coffee shop, we grew through
+                  word‑of‑mouth from founders who wanted hands‑on partners, not
+                  another agency folder.
+                </p>
+              </div>
+              <div
+                class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5"
+              >
+                <h3
+                  class="text-sm md:text-base font-semibold tracking-tight text-white mb-2"
+                >
+                  Mission
+                </h3>
+                <p class="text-slate-300">
+                  Help brands earn attention through creator‑led storytelling
+                  that feels native to every feed, not forced.
+                </p>
+              </div>
+              <div
+                class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5"
+              >
+                <h3
+                  class="text-sm md:text-base font-semibold tracking-tight text-white mb-2"
+                >
+                  Vision
+                </h3>
+                <p class="text-slate-300">
+                  A world where every campaign respects both the audience’s time
+                  and the creators’ craft.
+                </p>
+              </div>
+            </div>
+
+            <!-- Stats / Achievements -->
+            <div
+              class="border border-slate-800 rounded-3xl bg-slate-900/60 p-5 md:p-6 mb-10"
+            >
+              <div class="grid sm:grid-cols-3 gap-4 text-xs md:text-sm">
+                <div>
+                  <p
+                    class="text-lg md:text-xl font-semibold tracking-tight text-white"
+                  >
+                    95%
+                  </p>
+                  <p class="text-slate-400 mt-1">
+                    Client retention over the last 12 months
+                  </p>
+                </div>
+                <div>
+                  <p
+                    class="text-lg md:text-xl font-semibold tracking-tight text-white"
+                  >
+                    25M+
+                  </p>
+                  <p class="text-slate-400 mt-1">
+                    Organic views generated across campaigns
+                  </p>
+                </div>
+                <div>
+                  <p
+                    class="text-lg md:text-xl font-semibold tracking-tight text-white"
+                  >
+                    4.7/5
+                  </p>
+                  <p class="text-slate-400 mt-1">
+                    Average campaign satisfaction score
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA / Meet Team -->
+            <div
+              class="flex flex-col md:flex-row md:items-center justify-between gap-4"
+            >
+              <p class="text-xs md:text-sm text-slate-300">
+                Curious about the humans making the magic happen?
+              </p>
+              <a
+                href="#team-page"
+                class="inline-flex items-center justify-center rounded-full border border-slate-700 text-xs md:text-sm text-slate-100 px-4 py-2 hover:bg-slate-800/80 transition"
+              >
+                Meet the team
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- TEAM PAGE -->
+        <section
+          id="team-page"
+          class="bg-slate-950 border-t border-slate-900/80"
+        >
+          <div class="max-w-6xl mx-auto py-14 md:py-16 px-4 md:px-6">
+            <!-- Team Gallery -->
+            <div
+              class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8"
+            >
+              <div>
+                <p
+                  class="text-[0.7rem] md:text-xs uppercase tracking-[0.2rem] text-[#30A9DE] mb-2"
+                >
+                  Team
+                </p>
+                <h2
+                  class="text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight text-white mb-3"
+                >
+                  A small studio with big‑energy collaborators.
+                </h2>
+                <p class="text-sm md:text-base text-slate-300 max-w-xl">
+                  Strategists, writers, designers, and creator specialists
+                  across time zones—but aligned on the same playbook.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 mb-10"
+            >
+              <!-- Reuse styles, add hover for bios -->
+              <article
+                class="group relative rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden cursor-pointer"
+              >
+                <div
+                  class="h-28 bg-gradient-to-br from-[#FF7A00]/50 via-slate-900 to-[#30A9DE]/40"
+                ></div>
+                <div class="p-4">
+                  <h3
+                    class="text-sm md:text-base font-semibold tracking-tight text-white"
+                  >
+                    Mira Patel
+                  </h3>
+                  <p class="text-xs text-slate-400">
+                    Founder &amp; Head of Strategy
+                  </p>
+                </div>
+                <div
+                  class="absolute inset-0 bg-slate-950/95 opacity-0 group-hover:opacity-100 transition flex items-center justify-center p-4"
+                >
+                  <p
+                    class="text-xs md:text-sm text-slate-200 text-center leading-relaxed"
+                  >
+                    Loves translating messy brainstorms into roadmaps that teams
+                    can actually execute.
+                  </p>
+                </div>
+              </article>
+
+              <article
+                class="group relative rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden cursor-pointer"
+              >
+                <div
+                  class="h-28 bg-gradient-to-br from-[#30A9DE]/50 via-slate-900 to-[#E13E8F]/40"
+                ></div>
+                <div class="p-4">
+                  <h3
+                    class="text-sm md:text-base font-semibold tracking-tight text-white"
+                  >
+                    Lucas Green
+                  </h3>
+                  <p class="text-xs text-slate-400">Creative Director</p>
+                </div>
+                <div
+                  class="absolute inset-0 bg-slate-950/95 opacity-0 group-hover:opacity-100 transition flex items-center justify-center p-4"
+                >
+                  <p
+                    class="text-xs md:text-sm text-slate-200 text-center leading-relaxed"
+                  >
+                    Sketches concepts on napkins, then turns them into
+                    scroll‑stopping visuals.
+                  </p>
+                </div>
+              </article>
+
+              <article
+                class="group relative rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden cursor-pointer"
+              >
+                <div
+                  class="h-28 bg-gradient-to-br from-[#E13E8F]/45 via-slate-900 to-[#FF7A00]/45"
+                ></div>
+                <div class="p-4">
+                  <h3
+                    class="text-sm md:text-base font-semibold tracking-tight text-white"
+                  >
+                    Amina Sol
+                  </h3>
+                  <p class="text-xs text-slate-400">
+                    Creator Partnerships Lead
+                  </p>
+                </div>
+                <div
+                  class="absolute inset-0 bg-slate-950/95 opacity-0 group-hover:opacity-100 transition flex items-center justify-center p-4"
+                >
+                  <p
+                    class="text-xs md:text-sm text-slate-200 text-center leading-relaxed"
+                  >
+                    Knows which creators your audience already trusts—and how to
+                    brief them well.
+                  </p>
+                </div>
+              </article>
+
+              <article
+                class="group relative rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden cursor-pointer"
+              >
+                <div
+                  class="h-28 bg-gradient-to-br from-[#30A9DE]/40 via-slate-900 to-[#FF7A00]/45"
+                ></div>
+                <div class="p-4">
+                  <h3
+                    class="text-sm md:text-base font-semibold tracking-tight text-white"
+                  >
+                    Noah Chen
+                  </h3>
+                  <p class="text-xs text-slate-400">
+                    Performance &amp; Insights
+                  </p>
+                </div>
+                <div
+                  class="absolute inset-0 bg-slate-950/95 opacity-0 group-hover:opacity-100 transition flex items-center justify-center p-4"
+                >
+                  <p
+                    class="text-xs md:text-sm text-slate-200 text-center leading-relaxed"
+                  >
+                    Turns campaign data into stories your leadership team will
+                    care about.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <!-- Join Us CTA -->
+            <div
+              class="border border-slate-800 rounded-3xl bg-slate-900/60 p-5 md:p-6 flex flex-col md:flex-row md:items-center justify-between gap-4"
+            >
+              <div>
+                <h3
+                  class="text-sm md:text-base font-semibold tracking-tight text-white mb-1.5"
+                >
+                  Join the CoffeeConnect crew
+                </h3>
+                <p class="text-xs md:text-sm text-slate-300">
+                  We’re always open to meeting creators, strategists, and
+                  freelancers who love the internet as much as we do.
+                </p>
+              </div>
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center rounded-full border border-slate-700 text-xs md:text-sm text-slate-100 px-4 py-2 hover:bg-slate-800/80 transition"
+              >
+                Share your portfolio
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- BLOG PAGE -->
+        <section
+          id="blog-page"
+          class="bg-slate-950 border-t border-slate-900/80"
+        >
+          <div class="max-w-6xl mx-auto py-14 md:py-16 px-4 md:px-6">
+            <!-- Hero -->
+            <div
+              class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8"
+            >
+              <div>
+                <p
+                  class="text-[0.7rem] md:text-xs uppercase tracking-[0.2rem] text-[#30A9DE] mb-2"
+                >
+                  Blog
+                </p>
+                <h2
+                  class="text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight text-white mb-3"
+                >
+                  Fresh pours from the CoffeeConnect notebook.
+                </h2>
+                <p class="text-sm md:text-base text-slate-300 max-w-xl">
+                  Ideas, frameworks, and observations from our work across
+                  platforms and industries.
+                </p>
+              </div>
+            </div>
+
+            <!-- Posts Grid -->
+            <div class="grid md:grid-cols-3 gap-4 lg:gap-5 mb-8">
+              <article
+                class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5"
+              >
+                <p class="text-[0.7rem] text-slate-400 mb-1">
+                  Playbook · Strategy
+                </p>
+                <h3
+                  class="text-sm md:text-base font-semibold tracking-tight text-white mb-2"
+                >
+                  The Espresso‑Shot Framework for Short‑Form Scripts
+                </h3>
+                <p class="text-xs md:text-sm text-slate-300 mb-3">
+                  A simple way to write 15–30 second videos that don’t feel like
+                  ads—but still sell.
+                </p>
+                <button
+                  class="inline-flex items-center gap-1 text-[0.7rem] text-[#30A9DE] hover:text-[#52b8e4]"
+                >
+                  Read article
+                  <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                </button>
+              </article>
+
+              <article
+                class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5"
+              >
+                <p class="text-[0.7rem] text-slate-400 mb-1">
+                  Insights · Influencers
+                </p>
+                <h3
+                  class="text-sm md:text-base font-semibold tracking-tight text-white mb-2"
+                >
+                  What Creators Wish Brands Knew Before Launch Day
+                </h3>
+                <p class="text-xs md:text-sm text-slate-300 mb-3">
+                  Lessons from hundreds of briefs, approvals, and campaign Slack
+                  channels.
+                </p>
+                <button
+                  class="inline-flex items-center gap-1 text-[0.7rem] text-[#30A9DE] hover:text-[#52b8e4]"
+                >
+                  Read article
+                  <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                </button>
+              </article>
+
+              <article
+                class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5"
+              >
+                <p class="text-[0.7rem] text-slate-400 mb-1">
+                  Guide · Reporting
+                </p>
+                <h3
+                  class="text-sm md:text-base font-semibold tracking-tight text-white mb-2"
+                >
+                  Turning Campaign Results into Board‑Ready Slides
+                </h3>
+                <p class="text-xs md:text-sm text-slate-300 mb-3">
+                  How to summarize creator and social outcomes for non‑marketing
+                  leaders.
+                </p>
+                <button
+                  class="inline-flex items-center gap-1 text-[0.7rem] text-[#30A9DE] hover:text-[#52b8e4]"
+                >
+                  Read article
+                  <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                </button>
+              </article>
+            </div>
+
+            <!-- Newsletter / CTA -->
+            <div
+              class="border border-slate-800 rounded-3xl bg-slate-900/60 p-5 md:p-6 flex flex-col md:flex-row md:items-center justify-between gap-4"
+            >
+              <div>
+                <h3
+                  class="text-sm md:text-base font-semibold tracking-tight text-white mb-1.5"
+                >
+                  Get CoffeeConnect briefs in your inbox
+                </h3>
+                <p class="text-xs md:text-sm text-slate-300">
+                  No spam—just case studies, frameworks, and the occasional
+                  meme.
+                </p>
+              </div>
+              <form class="flex w-full md:w-auto flex-col sm:flex-row gap-2">
+                <input
+                  type="email"
+                  placeholder="you@brand.com"
+                  class="w-full sm:w-52 rounded-full bg-slate-950/80 border border-slate-700 text-xs md:text-sm text-slate-100 px-3 py-2 outline-none focus:border-[#30A9DE]"
+                />
+                <button
+                  type="submit"
+                  class="inline-flex items-center justify-center rounded-full bg-[#30A9DE] text-slate-950 text-xs md:text-sm font-medium tracking-tight px-4 py-2 hover:bg-[#52b8e4] transition"
+                >
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT PAGE -->
+        <section id="contact" class="bg-slate-950 border-t border-slate-900/80">
+          <div class="max-w-6xl mx-auto py-14 md:py-16 px-4 md:px-6">
+            <!-- Hero -->
+            <div class="grid md:grid-cols-[1.1fr,0.9fr] gap-8 mb-10">
+              <div>
+                <p
+                  class="text-[0.7rem] md:text-xs uppercase tracking-[0.2rem] text-[#30A9DE] mb-2"
+                >
+                  Contact
+                </p>
+                <h2
+                  class="text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight text-white mb-3"
+                >
+                  Share your brief, we’ll pour the ideas.
+                </h2>
+                <p class="text-sm md:text-base text-slate-300 mb-4">
+                  Tell us about your brand, goals, and timeline. We typically
+                  respond within one business day.
+                </p>
+                <div class="text-xs md:text-sm text-slate-300 space-y-1.5">
+                  <p>
+                    <span class="text-slate-400">Email:</span>
+                    jitender.sharma@coffeeconnect.org.in
+                  </p>
+                  <p>
+                    <span class="text-slate-400">Phone:</span>
+                    +918708621696
+                  </p>
+                  <p>
+                    <span class="text-slate-400">Studio:</span>
+                    Kharkhoda,Sonipat 131402
+                  </p>
+                </div>
+              </div>
+              <!-- Contact Form -->
+              <div
+                class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5"
+              >
+                <form class="space-y-3 text-xs md:text-sm">
+                  <div class="grid sm:grid-cols-2 gap-3">
+                    <div>
+                      <label class="block text-[0.7rem] text-slate-400 mb-1">
+                        Full name
+                      </label>
+                      <input
+                        type="text"
+                        class="w-full rounded-xl bg-slate-950/80 border border-slate-700 text-slate-100 px-3 py-2 outline-none focus:border-[#30A9DE]"
+                      />
+                    </div>
+                    <div>
+                      <label class="block text-[0.7rem] text-slate-400 mb-1">
+                        Work email
+                      </label>
+                      <input
+                        type="email"
+                        class="w-full rounded-xl bg-slate-950/80 border border-slate-700 text-slate-100 px-3 py-2 outline-none focus:border-[#30A9DE]"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-[0.7rem] text-slate-400 mb-1">
+                      Company &amp; role
+                    </label>
+                    <input
+                      type="text"
+                      class="w-full rounded-xl bg-slate-950/80 border border-slate-700 text-slate-100 px-3 py-2 outline-none focus:border-[#30A9DE]"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-[0.7rem] text-slate-400 mb-1">
+                      How can we help?
+                    </label>
+                    <textarea
+                      rows="3"
+                      class="w-full rounded-xl bg-slate-950/80 border border-slate-700 text-slate-100 px-3 py-2 outline-none focus:border-[#30A9DE]"
+                    ></textarea>
+                  </div>
+                  <div class="grid sm:grid-cols-2 gap-3">
+                    <div>
+                      <label class="block text-[0.7rem] text-slate-400 mb-1">
+                        Budget range (optional)
+                      </label>
+                      <input
+                        type="text"
+                        class="w-full rounded-xl bg-slate-950/80 border border-slate-700 text-slate-100 px-3 py-2 outline-none focus:border-[#30A9DE]"
+                      />
+                    </div>
+                    <div>
+                      <label class="block text-[0.7rem] text-slate-400 mb-1">
+                        Ideal start date
+                      </label>
+                      <input
+                        type="text"
+                        class="w-full rounded-xl bg-slate-950/80 border border-slate-700 text-slate-100 px-3 py-2 outline-none focus:border-[#30A9DE]"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    type="submit"
+                    class="w-full inline-flex items-center justify-center rounded-full bg-[#FF7A00] text-slate-950 text-xs md:text-sm font-medium tracking-tight px-4 py-2.5 hover:bg-[#ff8d26] transition"
+                  >
+                    Submit inquiry
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <!-- Social -->
+            <div class="grid md:grid-cols-1 gap-6">
+              <div
+                class="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 md:p-5 flex flex-col justify-between"
+              >
+                <div class="mb-4">
+                  <h3
+                    class="text-sm md:text-base font-semibold tracking-tight text-white mb-1.5"
+                  >
+                    Connect on social
+                  </h3>
+                  <p class="text-xs md:text-sm text-slate-300">
+                    We share behind‑the‑scenes looks, campaign recaps, and
+                    creator spotlights.
+                  </p>
+                </div>
+                <div class="flex flex-wrap gap-2 text-xs md:text-sm">
+                  <a
+                    href="https://www.instagram.com/coffeeconnect.org.in/ "
+                    class="inline-flex items-center gap-2 rounded-full border border-slate-700 text-slate-100 px-3 py-1.5 hover:bg-slate-800/80 transition"
+                  >
+                    <i data-lucide="instagram" class="w-3.5 h-3.5"></i>
+                    Instagram
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/coffee-connect-4ab015395?utm_source=share&amp ;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app"
+                    class="inline-flex items-center gap-2 rounded-full border border-slate-700 text-slate-100 px-3 py-1.5 hover:bg-slate-800/80 transition"
+                  >
+                    <i data-lucide="linkedin" class="w-3.5 h-3.5"></i>
+                    LinkedIn
+                  </a>
+                  <a
+                    href="http://youtube.com/channel/UCR5ffa9NIGKb-8nXqdUEx3w/ "
+                    class="inline-flex items-center gap-2 rounded-full border border-slate-700 text-slate-100 px-3 py-1.5 hover:bg-slate-800/80 transition"
+                  >
+                    <i data-lucide="youtube" class="w-3.5 h-3.5"></i>
+                    YouTube
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="border-t border-slate-900/80 bg-slate-950/95">
+        <div
+          class="max-w-6xl mx-auto py-6 md:py-8 px-4 md:px-6 flex flex-col md:flex-row md:items-center justify-between gap-4 text-xs md:text-sm text-slate-400"
+        >
+          <div class="flex items-center gap-2">
+            <span class="text-sm font-semibold tracking-tight text-slate-100">
+              CoffeeConnect
+            </span>
+            <span>·</span>
+            <span>Creative Influencer &amp; Social Studio</span>
+          </div>
+          <div class="flex flex-wrap items-center gap-3">
+            <a href="#home" class="hover:text-slate-200">Home</a>
+            <a href="#services" class="hover:text-slate-200">Services</a>
+            <a href="#portfolio" class="hover:text-slate-200">Portfolio</a>
+            <a href="#contact" class="hover:text-slate-200">Contact</a>
+          </div>
         </div>
-      </div>
+      </footer>
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer id="contact" class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> CoffeeConnect.org.in – brewed with ❤️ in India</p>
-      <div class="social">
-        <a href="#">Instagram</a>
-        <a href="#">Twitter</a>
-        <a href="mailto:hello@coffeeconnect.org.in">Email</a>
-      </div>
-    </div>
-  </footer>
+    <!-- App JS -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        if (window.lucide) {
+          window.lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
+        }
+      });
 
-  <script src="app.js"></script>
-</body>
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      let mobileOpen = false;
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', () => {
+          mobileOpen = !mobileOpen;
+          mobileMenu.style.maxHeight = mobileOpen ? mobileMenu.scrollHeight + 'px' : '0';
+          mobileBtn.innerHTML = mobileOpen
+            ? '<i data-lucide="x" class="w-4 h-4"></i>'
+            : '<i data-lucide="menu" class="w-4 h-4"></i>';
+          if (window.lucide) window.lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
+        });
+      }
+
+      const track = document.getElementById('testimonialTrack');
+      const prevBtn = document.getElementById('testimonialPrev');
+      const nextBtn = document.getElementById('testimonialNext');
+      if (track && prevBtn && nextBtn) {
+        let index = 0;
+        const slides = track.children;
+        const visible = 1;
+        const maxIndex = slides.length - visible;
+        function updateSlider() {
+          const width = slides[0].getBoundingClientRect().width;
+          track.style.transform = 'translateX(' + (-index * width) + 'px)';
+        }
+        nextBtn.addEventListener('click', () => {
+          index = index >= maxIndex ? 0 : index + 1;
+          updateSlider();
+        });
+        prevBtn.addEventListener('click', () => {
+          index = index <= 0 ? maxIndex : index - 1;
+          updateSlider();
+        });
+        window.addEventListener('resize', updateSlider);
+      }
+
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const portfolioItems = document
+    </script>
+  </body>
 </html>
